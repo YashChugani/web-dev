@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Quiz</title>
+</head>
+<body>
+    <h1>Create a Quiz</h1>
+    <form method="post" action="{{ url_for('create_quiz') }}">
+        <label for="title">Quiz Title:</label>
+        <input type="text" name="title" required><br>
+        
+        <label for="question">Question:</label>
+        <input type="text" name="question" required>
+        
+        <label for="options">Options (comma-separated):</label>
+        <input type="text" name="options" required>
+        
+        <label for="correct_answer">Correct Answer:</label>
+        <input type="text" name="correct_answer" required><br>
+        
+        <button type="submit">Add Question</button>
+    </form>
+</body>
+</html>
